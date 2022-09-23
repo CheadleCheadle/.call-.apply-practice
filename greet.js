@@ -3,8 +3,10 @@ function say(name) {
   console.log(`${this.message} ${name}!`);
 }
 
-helloMessage = { message: 'Hello,' };
-heyThereMessage = { message: 'Hey there,' };
+  helloMessage = { message: 'Hello,' };
+  heyThereMessage = { message: 'Hey there,' };
 
-say(helloMessage, "John");
-say(heyThereMessage, "Michael");
+
+ let callReturn = say.call(helloMessage, "John");
+ let differentCallReturn = say.call(heyThereMessage, "Michael");
+
